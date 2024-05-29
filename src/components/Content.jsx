@@ -10,6 +10,11 @@ const Content = ( props ) => {
                 handleChangeSemanasCotizadas = { props.handleChangeSemanasCotizadas }
                 edadActual = { props.edadActual }
                 handleChangeEdadActual = { props.handleChangeEdadActual }
+                estadoCivil = { props.estadoCivil }
+                handleChangeEstadoCivil = { props.handleChangeEstadoCivil }
+                hijos = { props.hijos }
+                handleChangeHijos = { props.handleChangeHijos }
+                handleClickCalcular = { props.handleClickCalcular }
             /> 
         </>
     )
