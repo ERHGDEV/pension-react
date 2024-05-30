@@ -6,6 +6,7 @@ const Content = ( props ) => {
             <CalculatorForm 
                 salarioMensual = { props.salarioMensual }
                 handleChangeSalarioMensual = { props.handleChangeSalarioMensual }
+                textMsjSalario = { props.textMsjSalario }
                 semanasCotizadas = { props.semanasCotizadas }
                 handleChangeSemanasCotizadas = { props.handleChangeSemanasCotizadas }
                 edadActual = { props.edadActual }

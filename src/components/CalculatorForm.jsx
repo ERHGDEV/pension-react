@@ -1,3 +1,5 @@
+import { salarioMinimoVigente } from "../assets/Constants"
+
 const CalculatorForm = ( props ) => {
     return (
         <>
@@ -8,9 +10,12 @@ const CalculatorForm = ( props ) => {
                 <input
                     value={ props.salarioMensual }
                     onChange={ props.handleChangeSalarioMensual }
+                    type="number"
+                    placeholder="Promedio últimos 5 años"
+                    min={ salarioMinimoVigente * 30 }
                 />
-                <div>
-                    Espacio para mensaje de error
+                <div className="msj-error">
+                    { props.textMsjSalario }
                 </div>
             </div>
 
@@ -19,8 +24,10 @@ const CalculatorForm = ( props ) => {
                 <input
                     value={ props.semanasCotizadas }
                     onChange={ props.handleChangeSemanasCotizadas }
+                    type="number"
+                    min="0"
                 />
-                <div>
+                <div className="msj-error">
                     Espacio para mensaje de error
                 </div>
             </div>
@@ -30,32 +37,34 @@ const CalculatorForm = ( props ) => {
                 <input
                     value={ props.edadActual }
                     onChange={ props.handleChangeEdadActual }
+                    type="number"
                 />
-                <div>
+                <div className="msj-error">
                     Espacio para mensaje de error
                 </div>
             </div>
 
             <div>
                 <label>Estado civil: </label>
-                <input
+                <select 
                     value={ props.estadoCivil }
                     onChange={ props.handleChangeEstadoCivil }
-                />
-                <div>
-                    Espacio para mensaje de error
-                </div>
+                >
+                    <option value="0">Solter@</option>
+                    <option value="1">Casad@</option>
+                </select>
             </div>
 
             <div>
                 <label>Hijos: </label>
-                <input
+                <select
                     value={ props.hijos }
                     onChange={ props.handleChangeHijos }
-                />
-                <div>
-                    Espacio para mensaje de error
-                </div>
+                >
+                    <option value="0">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
             </div>
 
             <div>
