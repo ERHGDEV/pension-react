@@ -20,6 +20,19 @@ const CalculatorForm = ( props ) => {
             </div>
 
             <div>
+                <label>Edad actual: </label>
+                <input
+                    value={ props.edadActual }
+                    onChange={ props.handleChangeEdadActual }
+                    type="number"
+                    min="40"
+                />
+                <div className="msj-error">
+                    { props.textMsjEdad }
+                </div>
+            </div>
+
+            <div>
                 <label>Semanas cotizadas: </label>
                 <input
                     value={ props.semanasCotizadas }
@@ -28,19 +41,7 @@ const CalculatorForm = ( props ) => {
                     min="0"
                 />
                 <div className="msj-error">
-                    Espacio para mensaje de error
-                </div>
-            </div>
-
-            <div>
-                <label>Edad actual: </label>
-                <input
-                    value={ props.edadActual }
-                    onChange={ props.handleChangeEdadActual }
-                    type="number"
-                />
-                <div className="msj-error">
-                    Espacio para mensaje de error
+                    { props.textMsjSemanas }
                 </div>
             </div>
 

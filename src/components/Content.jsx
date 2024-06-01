@@ -9,8 +9,10 @@ const Content = ( props ) => {
                 textMsjSalario = { props.textMsjSalario }
                 semanasCotizadas = { props.semanasCotizadas }
                 handleChangeSemanasCotizadas = { props.handleChangeSemanasCotizadas }
+                textMsjSemanas = { props.textMsjSemanas }
                 edadActual = { props.edadActual }
                 handleChangeEdadActual = { props.handleChangeEdadActual }
+                textMsjEdad = { props.textMsjEdad }
                 estadoCivil = { props.estadoCivil }
                 handleChangeEstadoCivil = { props.handleChangeEstadoCivil }
                 hijos = { props.hijos }
